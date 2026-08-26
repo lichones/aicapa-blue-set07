@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="분야와 지역으로 찾아보는 자원봉사 모집공고">
+  <title>우리동네 자원봉사 찾기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">2025 VOLUNTEER DIRECTORY</p>
+      <h1>좋은 일을, 가까운 곳에서</h1>
+      <p class="hero__copy">분야와 지역을 한 번에 검색하고 나에게 맞는 자원봉사 모집공고를 찾아보세요.</p>
+      <dl class="hero__stats" aria-label="전체 현황">
+        <div><dt>전체 공고</dt><dd id="total-posts">0건</dd></div>
+        <div><dt>총 모집인원</dt><dd id="total-people">0명</dd></div>
+        <div><dt>활동 분야</dt><dd id="total-categories">0개</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="category-title">
+      <div class="section__heading">
+        <div><p class="eyebrow">BY CATEGORY</p><h2 id="category-title">분야별 모집 현황</h2></div>
+        <p>카드를 선택하면 해당 분야만 바로 볼 수 있습니다.</p>
+      </div>
+      <div id="category-cards" class="category-grid"></div>
+    </section>
+
+    <section class="section search-panel" aria-labelledby="search-title">
+      <div class="section__heading section__heading--search">
+        <div><p class="eyebrow">FIND A PROGRAM</p><h2 id="search-title">모집공고 검색</h2></div>
+        <p id="result-count" class="result-count" aria-live="polite">전체 0건</p>
+      </div>
+      <label class="search-box" for="keyword">
+        <span class="search-box__label">분야 또는 지역</span>
+        <input id="keyword" type="search" placeholder="예: 교육, 부산" autocomplete="off">
+        <button id="clear-search" type="button">초기화</button>
+      </label>
+      <div id="notice-list" class="notice-grid"></div>
+      <p id="empty-state" class="empty-state" hidden>조건에 맞는 모집공고가 없습니다.</p>
+    </section>
+
+    <section class="section" aria-labelledby="news-title">
+      <div class="section__heading">
+        <div><p class="eyebrow">VOLUNTEER STORIES</p><h2 id="news-title">자원봉사 카드뉴스</h2></div>
+        <p>함께하는 마음을 카드뉴스로 만나보세요.</p>
+      </div>
+      <div class="news-grid">
+        <figure><img src="이미지/카드뉴스1.png" alt="자원봉사 카드뉴스 1" loading="lazy"></figure>
+        <figure><img src="이미지/카드뉴스2.png" alt="자원봉사 카드뉴스 2" loading="lazy"></figure>
+        <figure><img src="이미지/카드뉴스3.png" alt="자원봉사 카드뉴스 3" loading="lazy"></figure>
+        <figure><img src="이미지/카드뉴스4.png" alt="자원봉사 카드뉴스 4" loading="lazy"></figure>
+        <figure><img src="이미지/카드뉴스5.png" alt="자원봉사 카드뉴스 5" loading="lazy"></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>2025 자원봉사 모집공고 데이터 기준 · 정적 웹 페이지</p></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
